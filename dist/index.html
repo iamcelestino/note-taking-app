@@ -23,20 +23,24 @@
             <input type="text" class="" placeholder="seach note">
             <img src="" alt="">
         </div>
-        <div class="content">
+        <div class="content__container">
             <h1>Notes</h1>
             <div class="notes">
-                <div class="note">
+                <div class="note__container">
                     <h6 class="note_title"></h6>
                     <p class="note__description"></p>
+                    <div class="actions">
+                        <ion-icon name="trash-outline"></ion-icon>
+                        <ion-icon name="create-outline"></ion-icon>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="addNote_form">
             <form action="">
-                <input type="text" class="">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button>Add</button>
+                <input type="text" name="title" id="title">
+                <textarea name="doteDescription" id="noteDescription" cols="30" rows="10"></textarea>
+                <button type="submit">Add</button>
             </form>
         </div>
     </main>
