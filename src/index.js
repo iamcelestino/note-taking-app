@@ -1,7 +1,8 @@
 import Note from "./logic/logic";
 
 const form = document.querySelector("form");
-const noteContainer = (document.querySelector(".note__container"));
+const contentContainer = document.querySelector(".content__container");
+const note = new Note(contentContainer);
 
 
 
@@ -9,6 +10,8 @@ form.addEventListener("submit", event  => {
     event.preventDefault()
     const title = form.title.value;
     const noteDescription = form.noteDescription.value;
-    const note = new Note(noteContainer, title, noteDescription);
-    note.addNote();
-})
+    note.addNote(title, noteDescription);
+    form.reset();
+});
+
+note.deleteNote();
