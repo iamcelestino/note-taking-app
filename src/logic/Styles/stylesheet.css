@@ -1,8 +1,172 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .note {
     background-color: chocolate;
     padding: 1.3rem;
     margin-top: 1rem;
     width: 400px;
     height: 200px;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid rgb(152, 152, 152);
+}
+
+.sidebar .flex {
+    display: flex;
+    align-items: center;
+}
+
+
+.add__note {
+    background-color: black;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    color: #ffff;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ion-icon {
+    font-size: 2rem;
+}
+
+img {
+    max-width: 6%;
+    border-radius: 50px;
+    display: block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bg-coral {
+    background-color: coral;
+}
+
+.bg-aqua {
+    background-color: aqua;
+}
+
+.note__colors div {
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
+main {
+    width: 100%;
+    margin-left: 10.5rem;
+}
+
+.header, .header div {
+    display: flex;
+    align-items: center;
+}
+
+main .header {
+    padding: 1rem 0;
+    justify-content: space-between;
+}
+
+.header input {
+    background-color: aliceblue;
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+.note__container {
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: 1px solid coral;
+}
+
+
+.addNote__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: 	rgba(240,248,255, 0.8);
+}
+
+form {
+    background-color: #ffff;
+    display: inline-block;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+textarea {
+    background-color: #ffff;
+    padding: 0.2rem;
+}
+
+form 
+input, 
+textarea {
+    width: 100%;
+    border: 3px solid aliceblue;
+    border-radius: 10px;
+}
+
+input {
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+}
+
+label{
+    display: block;
+    margin: 0.6rem 0;
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    margin-top: 1rem;
+}
+
+.active {
+    display: none;
 }
