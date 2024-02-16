@@ -114,9 +114,8 @@ main .header {
     border: 1px solid coral;
 }
 
-
 .addNote__form {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -125,7 +124,7 @@ main .header {
     width: 100%;
     height: 100%;
     background-color: 	rgba(240,248,255, 0.8);
-}
+} 
 
 
 
@@ -177,14 +176,11 @@ label{
     margin-top: 1rem;
 }
 
-.active {
-    display: none;
-}
 
 
 .empty__error {
     background-color: 	rgba(240,248,255, 0.9);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -197,10 +193,19 @@ label{
 
 .error__message {
     background-color: #ffff;
-    padding: 2rem;
+    padding: 2.5rem;
+    margin: 0 2rem;
+    position: relative
 }
 
-.message.close {
+.close__message {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+}
 
+.active {
+    display: flex;
 }
 
