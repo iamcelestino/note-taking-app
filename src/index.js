@@ -9,12 +9,13 @@ form.addEventListener("submit", event  => {
     event.preventDefault()
     const title = form.title.value;
     const noteDescription = form.noteDescription.value;
-    if ((noteDescription === " ")) {
-        console.log("digite a note")
-    } else {
+    if (noteDescription.length === 0) {
+        console.log("test")
+    }
+    else {
         note.addNote(title, noteDescription);
         form.reset();
     }
 });
 
-note.deleteAndUpdate();
+note.deleteNote();
