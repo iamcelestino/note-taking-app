@@ -4,31 +4,47 @@ class Note {
     constructor(container){
         this.contentContainer = container;
     }
-    addNote(noteTitle, description) {
-        localStorage.setItem('title', noteTitle)
-        localStorage.setItem ('noteDescription', description);
+    addNote(noteText) {
         const html = `
         <div class="note__container">
-            <h6 class="note_title">${localStorage.getItem('title')}</h6>
-            <p class="note__description">${localStorage.getItem('noteDescription')}</p>
+            <p class="note__description">${noteText}</p>
             <div class="actions">
                 <ion-icon id="trash_delete" name="trash-outline"></ion-icon>
             </div>
         </div>
         `
-        this.contentContainer.innerHTML += html;;
+        localStorage.setItem('html', html);
+        this.contentContainer.innerHTML += localStorage.getItem('html');
     }
-    // upateColor(noteColors) {
-    //     noteColors.addEventListener("click", event => {
-    //         if (event.target.className === "bg-coral") {
-    //            Array.from(this.contentContainer.children).forEach(item => {
-    //                 if (item.className === "note__container") {
-    //                     this.contentContainer.childNodes[3].classList.add('bg-coral');
-    //                 }
-    //            })
-    //         }
-    //     });
-    // }
+    setNoteColor(noteColors) {
+        noteColors.addEventListener('click', event  => {
+            const color = event.target.className;
+
+            switch(color) {
+
+                case 'bg-coral':
+                    this.contentContainer.classList.add('bg-coral');
+                break;
+
+                case 'bg-aqua':
+                    this.contentContainer.classList.add('bg-aqua');
+                    break;
+
+                case 'bg-green':
+                    this.contentContainer.classList.add('bg-green');
+                    break;
+
+                case 'bg-yellow':
+                    this.contentContainer.classList.add('bg-yellow');
+                    break;
+    
+                default:
+                    this.contentContainer.classList.add('bg-coral');
+                    break;
+            }
+
+        })
+    }
     deleteNote() {
       this.contentContainer.addEventListener("click", event => {
             const element = event.target.parentElement;

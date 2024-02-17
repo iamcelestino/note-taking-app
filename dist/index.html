@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta author="Celestino Trosso">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Note Taking App</title>
 </head>
 <body>
     <aside class="sidebar">
-        <h1>Celestino</h1>
+        <h1>Docket</h1>
         <div class="">
             <ion-icon class="add__note" name="add-outline"></ion-icon>
         </div>
@@ -15,7 +16,7 @@
             <div class="bg-coral"></div>
             <div class="bg-aqua"></div>
             <div class="bg-green"></div>
-            <div class="bg-purple"></div>
+            <div class="bg-yellow"></div>
         </div>
     </aside>
     <main>
@@ -23,20 +24,12 @@
             <input type="text" class="" placeholder="seach note">
             <img src="" alt="">
         </div>
+
+        <h1>Notes</h1>
         <div class="content__container">
-            <h1>Notes</h1>
-            <div class="note__container">
-                <h6 class="note_title">HTMLcolletion</h6>
-                <p class="note__description">to turn a html colletion into array we use Array.from()</p>
-                <div class="actions">
-                    <ion-icon id="trash_delete" name="trash-outline"></ion-icon>
-                </div>
-            </div>
         </div>
         <div class="addNote__form">
             <form action="">
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title">
                 <label for="noteDescription">Note <span>*</span></label>
                 <textarea name="noteDescription" id="noteDescription" cols="30" rows="10"></textarea>
                 <button type="submit">Add</button>
